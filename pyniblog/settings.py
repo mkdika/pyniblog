@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'blog.apps.BlogConfig'
 ]
 
@@ -119,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'Advanced',
+#     },
+# }

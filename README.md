@@ -20,6 +20,19 @@ As commons simple blog platform, here are the essential features:
 - Front-Page: Home, About, Archive, Categories, Tags, Post
 - Responsive view for both admin & front page.
 
+## Requirement
+
+There are some external libraries required for this project:
+
+- [Django CKEditor](https://github.com/django-ckeditor/django-ckeditor), for wysiwyg editor.
+
+  ```console
+  # install with pip
+  pip install django-ckeditor
+  ```
+
+  View the Django CKEditor installation [document](https://github.com/django-ckeditor/django-ckeditor#installation).
+
 ## Build and Testing
 
 _Coming soon.._
