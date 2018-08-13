@@ -24,9 +24,13 @@ As commons simple blog platform, here are the essential features:
 
 _Coming soon.._
 
-## Deployment
+## Local Deployment
 
-_Coming soon.._
+### Admin Page
+
+- Default admin page url is [http://localhost:8000/admin](http://localhost:8000/admin)
+  
+  Default admin page account is username: `admin` and password: `admin123`
 
 ## Online Demo
 
@@ -38,5 +42,5 @@ _Coming soon.._
 
 ## Copyright and License
 
-Copyright 2018 Maikel Chandika (mkdika@gmail.com). Code released under the 
+Copyright 2018 Maikel Chandika (mkdika@gmail.com). Code released under the
 Apache License, Version 2.0. See [LICENSE](/LICENSE) file.
