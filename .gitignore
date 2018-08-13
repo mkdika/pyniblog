@@ -86,6 +86,6 @@ __pycache__/
 local_settings.py
 
 .env
-# db.sqlite3 # intended to be upload
+# db.sqlite3 # intended to be uploaded
 
 media/

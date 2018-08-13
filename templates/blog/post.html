@@ -1,0 +1,34 @@
+{% extends "blank.html" %} {% load staticfiles %} {% block content %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('/static/img/post-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>{{post.title}}</h1>
+          <span class="meta">Posted by
+            <a href="#">{{post.user.first_name}} {{post.user.last_name}}</a>
+            on {{post.post_date|date:'d M Y g:i a'}}
+            <br/> at
+            <a href="#">{{post.category|title}}</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {{post.post_body|safe}}
+      </div>
+    </div>
+  </div>
+</article>
+
+{% endblock %}

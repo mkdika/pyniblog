@@ -24,7 +24,7 @@ As commons simple blog platform, here are the essential features:
 
 There are some external libraries required for this project:
 
-- [Django CKEditor](https://github.com/django-ckeditor/django-ckeditor), for wysiwyg editor.
+- __Django CKEditor__, for wysiwyg editor.
 
   ```console
   # install with pip
@@ -32,6 +32,8 @@ There are some external libraries required for this project:
   ```
 
   View the Django CKEditor installation [document](https://github.com/django-ckeditor/django-ckeditor#installation).
+
+- [__Jinja2__](https://github.com/pallets/jinja), web template engine.  
 
 ## Build and Testing
 
