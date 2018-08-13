@@ -8,6 +8,7 @@ admin.site.register(PostComment)
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+  
     # to make the display of field in this order
     fields = ("permalink","title","post_date","release","post_body",
               "category",
