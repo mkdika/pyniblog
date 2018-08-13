@@ -28,6 +28,14 @@
         {{post.post_body|safe}}
       </div>
     </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        Tags:&nbsp;{% for tag in post.tags.all %}
+        <a href="">
+          <i>{{tag.tag_name|title}}</i>
+        </a>{% if not forloop.last %},{% endif %}{% endfor %}
+      </div>
+    </div>
   </div>
 </article>
 

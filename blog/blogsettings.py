@@ -10,4 +10,4 @@ class BlogSetting():
   copyright     = 'Maikel Chandika'
 
   # pagination number for post main page
-  post_per_page = 5
+  post_per_page = 5 
