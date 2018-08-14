@@ -26,10 +26,10 @@
           </h2>
         </a>
         <p class="post-meta">Posted by
-          <a href="#">{{post.user.first_name}} {{post.user.last_name}}</a>
+          <a href="posts/users/{{post.user}}">{{post.user.first_name}} {{post.user.last_name}}</a>
           on {{post.post_date|date:'d M Y g:i a'}}
           <br/> at
-          <a href="#">{{post.category|title}}</a>
+          <a href="posts/categories/{{post.category}}">{{post.category|title}}</a>
         </p>
       </div>
       {% endfor %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Post,Tag
 from .blogsettings import BlogSetting
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -34,3 +34,24 @@ def post(request, permalink):
         'blog': BlogSetting
     }
     return render(request, 'blog/post.html', response_dict)
+
+
+def search(request, search_by, id):
+
+    search = f"{search_by}: {id}"
+
+    if search_by == 'users':
+        posts = Post.objects.filter(user__username__contains=id).order_by('-post_date')
+    elif search_by == 'categories':
+        posts = Post.objects.filter(category__category_name__contains=id).order_by('-post_date')
+    elif search_by == 'tags':
+        tag = Tag.objects.get(tag_name=id)
+        posts = Post.objects.filter(tags__in=[tag]).order_by('-post_date')
+
+    response_dict = {
+        'posts': posts,
+        'search': search,
+        'blog': BlogSetting,
+        
+    }
+    return render(request, 'blog/search.html', response_dict)

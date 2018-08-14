@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 
 
-
 class Category(models.Model):
 
   category_name = models.CharField(max_length=100, unique=True)
@@ -56,9 +55,3 @@ class PostComment(models.Model):
 
   class Meta:
     db_table = 'tb_post_comment' 
-
-
-
-
-
-
