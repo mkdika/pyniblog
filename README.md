@@ -33,8 +33,6 @@ There are some external libraries required for this project:
 
   View the Django CKEditor installation [document](https://github.com/django-ckeditor/django-ckeditor#installation).
 
-- [__Jinja2__](https://github.com/pallets/jinja), web template engine.  
-
 ## Build and Testing
 
 _Coming soon.._
