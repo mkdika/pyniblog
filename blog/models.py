@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from datetime import datetime
 
 
 class Category(models.Model):
@@ -48,10 +49,11 @@ class PostComment(models.Model):
   name          = models.CharField(max_length=50)
   email         = models.CharField(max_length=100)
   comment_body  = RichTextField()
-  Post          = models.ForeignKey(Post,on_delete=models.CASCADE)
+  comment_date  = models.DateTimeField(default=datetime.now)
+  post          = models.ForeignKey(Post,on_delete=models.CASCADE)
 
   def __str__(self):
-    return f"{self.name} ({self.email})"
+    return f"{self.post} (by: {self.name})"
 
   class Meta:
     db_table = 'tb_post_comment' 

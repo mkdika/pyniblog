@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post, Tag
+from .models import Post, Tag, PostComment
 from .blogsettings import BlogSetting
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -27,9 +27,11 @@ def index(request):
 
 def post(request, permalink):
 
-    post = Post.objects.filter(permalink=permalink)
+    posts = Post.objects.filter(permalink=permalink)
+    post = posts[0]
+    comments = PostComment.objects.filter(post=post).order_by('-comment_date')
 
-    response_dict.update({'post': post[0]})
+    response_dict.update({'post': post,'comments':comments})
     return render(request, 'blog/post.html', response_dict)
 
 
