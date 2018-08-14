@@ -6,11 +6,8 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>Search</h1>
-          <span class="subheading">By {{search|title}}
-            <br/> Found
-            <strong>{{posts|length}}</strong> posts.
-          </span>
+          <h1>{{ar_mode|title}}</h1>
+          <span class="subheading">Total&nbsp;<strong>{{posts|length}}</strong>&nbsp;posts</span>
         </div>
       </div>
     </div>
@@ -21,25 +18,43 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      {% for post in posts %}
+
+      {% if ar_mode == 'archive' %}
+        {% regroup posts by post_date|date:"Y" as objects_by_year %}
+      {% elif ar_mode == 'categories' %}
+        {% regroup posts by category as objects_by_year %}
+      {% endif %}
       <div class="post-preview">
-        <a href="/posts/{{post.permalink}}">
-          <h2 class="post-title">
-            {{post.title}}
-          </h2>
-        </a>
-        <p class="post-meta">Posted by
-          <a href="/posts/users/{{post.user}}">{{post.user.first_name}} {{post.user.last_name}}</a>
-          on {{post.post_date|date:'d M Y g:i a'}}
-          <br/> at
-          <a href="/posts/categories/{{post.category}}">{{post.category|title}}</a>
-          in {% for tag in post.tags.all %}
-          <a href="/posts/tags/{{tag}}">
-            {{tag.tag_name|title}}</i>
-          </a>{% if not forloop.last %},{% endif %}{% endfor %}
-        </p>
+        <ul style="padding-left: 0;">
+          {% for obj in objects_by_year %}
+          <li style="list-style: none; padding-left: 0;">
+            <h2 class="post-title">
+              {{obj.grouper|title}}
+            </h2>
+            <ul>
+              {% for post in obj.list %}
+              <li style="padding-left: 0;">
+                <h4 class="post-title">
+                  <a href="/posts/{{post.permalink}}">{{post.title}}</a>
+                </h4>
+                <div class="post-meta text-muted small">Posted by
+                  <a href="/posts/users/{{post.user}}">{{post.user.first_name}} {{post.user.last_name}}</a>
+                  on {{post.post_date|date:'d M Y g:i a'}}
+                  <br/> at
+                  <a href="/posts/categories/{{post.category}}">{{post.category|title}}</a>
+                  in {% for tag in post.tags.all %}
+                  <a href="/posts/tags/{{tag}}">
+                    {{tag.tag_name|title}}</i>
+                  </a>{% if not forloop.last %},{% endif %}{% endfor %}
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+            <br/>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
-      {% endfor %}
     </div>
   </div>
 </div>

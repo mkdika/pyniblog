@@ -54,3 +54,19 @@ def search(request, search_by, id):
 def about(request):
 
     return render(request, 'blog/about.html', response_dict)
+
+
+def archive(request, mode):
+
+    if mode == 'year':
+        ar_mode = 'archive'
+    elif mode == 'categories':
+        ar_mode = mode
+
+    posts = Post.objects.filter(release=True).order_by('-post_date')
+
+    response_dict.update({'ar_mode':ar_mode,
+                          'posts':posts})
+
+    return render(request, 'blog/archive.html', response_dict)
+
