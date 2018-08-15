@@ -1,9 +1,16 @@
 
 class BlogSetting():
 
+    # blog short name, to be appear on upper left conner of each page.
     name = 'PyniBlog'
+
+    # blog title, for main page.
     title = 'Simple Blog'
+
+    # blog sub, for main page.
     sub_title = 'A Django 2 Based Blog Engine'
+
+    # social media account link, to be apper on bottom section of each page.
     twitter_url = 'http://twitter.com/maikelchandika'
     facebook_url = 'http://facebook.com/maikel.chandika'
     github_url = 'http://github.com/mkdika'
@@ -12,6 +19,7 @@ class BlogSetting():
     # pagination number for post main page
     post_per_page = 5
 
+    # about page setup
     about_sub_title = "How's this blog goes"
     about_blog = """
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci est, 

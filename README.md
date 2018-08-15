@@ -35,7 +35,11 @@ There are some external libraries required for this project:
 
 ### Build
 
-  For first time, run:
+- Blog Setup
+
+  For blog setup please open and edit the `blog/blogsettings.py` with your own preference.
+
+- For first time, run:
 
   ```console
   # create all required migration
@@ -57,6 +61,10 @@ To run as local server:
 ```console
 py manage.py runserver
 ```
+
+### Main Page
+
+Main page (front-page) can be access from [http://localhost:8000](http://localhost:8000)
 
 ### Admin Page
 
