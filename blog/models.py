@@ -30,8 +30,8 @@ class Post(models.Model):
 
   permalink   = models.CharField(max_length=255, unique=True)
   title       = models.CharField(max_length=255)
-  post_date   = models.DateTimeField()
-  post_body   = RichTextField()
+  post_date   = models.DateTimeField(default=datetime.now)
+  post_body   = RichTextField(blank=True)
   release     = models.BooleanField(default=False)
   user        = models.ForeignKey(User,on_delete=models.CASCADE)
   category    = models.ForeignKey(Category,on_delete=models.PROTECT)

@@ -38,6 +38,16 @@ All admin page operations are base on Django Admin page.
 
 - [Django Simple Captcha](https://django-simple-captcha.readthedocs.io/en/latest/usage.html)
 
+### Test Framework and Libraries
+
+- [Unittests](https://docs.python.org/3/library/unittest.html), unit test framework.
+
+- [PyHamcrest](https://github.com/hamcrest/PyHamcrest), objects matcher test lib.
+
+- [Unittests.Mock](https://docs.python.org/3/library/unittest.mock.html), mock test lib.
+
+- [Coverage](https://coverage.readthedocs.io/en/coverage-4.5.1a/), coverage unit test lib.
+
 Or view the `requirements.txt` file.
 
 ## Build and Testing
