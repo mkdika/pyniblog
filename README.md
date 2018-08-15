@@ -5,9 +5,9 @@
 [![codecov](https://codecov.io/gh/mkdika/pyniblog/branch/master/graph/badge.svg)](https://codecov.io/gh/mkdika/pyniblog)
 [![codebeat badge](https://codebeat.co/badges/9298084a-61f8-4789-9d87-a0ec77a07655)](https://codebeat.co/projects/github-com-mkdika-pyniblog-master)
 
-A simple POC for Blog application, build with Python3 and Django 2.1.
-
 ![Imgur](https://i.imgur.com/uoRGiDz.png)
+
+A simple POC for Blog application, build with Python3 and Django 2.1.
 
 ## Features
 

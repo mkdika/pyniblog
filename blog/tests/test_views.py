@@ -66,14 +66,14 @@ class ArchiveTest(TestCase):
 
   def test_archive_year(self):
 
-    response = self.client.get('/archieves/year')
-    assert_that(response.status_code, equal_to(404))  
+    response = self.client.get('/archives/year')
+    assert_that(response.status_code, equal_to(200))  
 
 
   def test_archive_categories(self):
 
-    response = self.client.get('/archieves/categories')
-    assert_that(response.status_code, equal_to(404))  
+    response = self.client.get('/archives/categories')
+    assert_that(response.status_code, equal_to(200))  
 
 
 class SearchTest(TestCase):
