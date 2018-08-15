@@ -47,7 +47,7 @@ class Post(models.Model):
 class PostComment(models.Model):
 
   name          = models.CharField(max_length=50)
-  email         = models.CharField(max_length=100)
+  email         = models.CharField(max_length=100,blank=True)
   comment_body  = RichTextField()
   comment_date  = models.DateTimeField(default=datetime.now)
   post          = models.ForeignKey(Post,on_delete=models.CASCADE)

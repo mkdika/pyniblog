@@ -25,13 +25,9 @@ As commons simple blog platform, here are the essential features:
 There are some external libraries required for this project:
 
 - __Django CKEditor__, for wysiwyg editor.
-
-  ```console
-  # install with pip
-  pip install django-ckeditor
-  ```
-
   View the Django CKEditor installation [document](https://github.com/django-ckeditor/django-ckeditor#installation).
+
+- [__Django Simple Captcha__](https://django-simple-captcha.readthedocs.io/en/latest/usage.html)
 
 ## Build and Testing
 

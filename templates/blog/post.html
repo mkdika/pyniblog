@@ -1,4 +1,4 @@
-{% extends "blank.html" %} {% load staticfiles %} {% block content %}
+{% extends "blank.html" %} {% load staticfiles %}{% load bootstrap %}{% block content %}
 
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('/static/img/post-bg.jpg')">
@@ -41,19 +41,26 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <h2 class="post-title">Comments ({{comments|length}}):</h2>
-        <ul>
+        <br/>
+        <div class="container">
+          <form action="/posts/{{post.permalink}}/addcomment" method="POST" role="form">
+              {{ form|bootstrap }}
+              {% csrf_token %}
+              <input type="submit" class="btn btn-primary" value="Submit">
+          </form>
+        </div>
+        <br/>
           {% for comment in comments %}
           <blockquote class="quote-card">
             <p>
               {{comment.comment_body|safe}}
             </p>
             <cite>
-              By {{comment.name}} (<a href="mailto:{{comment.email}}">{{comment.email}}</a>)
+              By {{comment.name}} {% if comment.email %}(<a href="mailto:{{comment.email}}">{{comment.email}}</a>){% endif %}
               <br/>on {{comment.comment_date|date:'d M Y g:i a'}}
             </cite>
           </blockquote>
           {% endfor %}
-        </ul>
       </div>
     </div>
     {% endif %}
