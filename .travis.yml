@@ -14,7 +14,7 @@ install:
 # - chmod +x mvnw
  
 before_script:
-  - pip install --user codecov
+  - pip install codecov && codecov -t 282fb639-6547-4822-abeb-32b13032e468
   
 script: python manage.py test
   
