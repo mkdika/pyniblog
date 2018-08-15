@@ -2,6 +2,8 @@
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green.svg)](/LICENSE)
 [![Build Status](https://travis-ci.org/mkdika/pyniblog.svg?branch=master)](https://travis-ci.org/mkdika/pyniblog)
+[![codebeat badge](https://codebeat.co/badges/9298084a-61f8-4789-9d87-a0ec77a07655)](https://codebeat.co/projects/github-com-mkdika-pyniblog-master)
+
 
 
 A simple POC for Blog application, build with Python3 and Django 2.1.
@@ -66,7 +68,20 @@ pip install -r requirements.txt
 ### Testing
 
 ```console
+# run the Django unit test
 py manage.py test
+
+# run the coverage unit test
+coverage run --source='.' manage.py test blog
+
+# view terminal coverage report
+coverage report
+
+# view html coverage report
+coverage html
+
+# erase/remove gathered data
+coverage erase
 ```
 
 
