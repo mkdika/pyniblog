@@ -63,7 +63,9 @@ pip install -r requirements.txt
 
 ### Testing
 
-_Coming soon..._
+```console
+py manage.py test
+```
 
 
 ## Local Deployment
