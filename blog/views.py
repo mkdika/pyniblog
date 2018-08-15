@@ -23,8 +23,6 @@ def index(request):
         page_posts = paginator.page(page)
     except PageNotAnInteger:
         page_posts = paginator.page(1)
-    except EmptyPage:
-        page_posts = paginator.page(paginator.num_pages)
 
     response_dict.update({'posts': page_posts})
     return render(request, 'blog/main.html', response_dict)

@@ -3,7 +3,7 @@ from hamcrest import *
 import unittest
 from unittest.mock import MagicMock
 from django.contrib.auth.models import User
-from .models import Category, Tag, Post, PostComment
+from blog.models import Category, Tag, Post, PostComment
 
 class CategoryTest(TestCase):
   def setUp(self):
@@ -13,6 +13,10 @@ class CategoryTest(TestCase):
     java = Category.objects.get(category_name="java")
     assert_that(str(java),equal_to("java"))
 
+  def tearDown(self):
+
+    pass  
+
 
 class TagTest(TestCase):
   def setUp(self):
@@ -21,6 +25,10 @@ class TagTest(TestCase):
   def test_tag_name(self):
     tutorial = Tag.objects.get(tag_name="tutorial")
     assert_that(str(tutorial),equal_to("tutorial"))
+  
+  def tearDown(self):
+
+    pass
 
 
 class PostTest(TestCase):
@@ -32,6 +40,10 @@ class PostTest(TestCase):
   def test_post_title(self):
     hello_world = Post.objects.get(title="Hello World")
     assert_that(str(hello_world),equal_to("Hello World"))
+
+  def tearDown(self):
+
+    pass  
 
 
 class PostCommentTest(TestCase):
@@ -45,3 +57,7 @@ class PostCommentTest(TestCase):
   def test_post_comment_name(self):
     post_comment = PostComment.objects.get(name="maikel")
     assert_that(str(post_comment), equal_to("Hello World (by: maikel)"))
+
+  def tearDown(self):
+
+    pass
