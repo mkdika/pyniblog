@@ -1,0 +1,30 @@
+language: python
+
+sudo: false
+
+dist: trusty
+
+python:
+  - "3.6"
+
+install:
+  - pip install -r requirements.txt  
+  
+#before_install:
+# - chmod +x mvnw
+ 
+before_script:
+  - pip install --user codecov
+  
+script: python manage.py test
+  
+after_success:
+  - codecov
+  
+branches:
+  only:
+  - master
+  
+cache:
+  directories:
+  - .autoconf

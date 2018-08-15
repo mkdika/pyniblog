@@ -1,6 +1,8 @@
 # PyniBlog
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-green.svg)](/LICENSE)
+[![Build Status](https://travis-ci.org/mkdika/pyniblog.svg?branch=master)](https://travis-ci.org/mkdika/pyniblog)
+
 
 A simple POC for Blog application, build with Python3 and Django 2.1.
 
