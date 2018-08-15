@@ -7,7 +7,7 @@
 
 ![Imgur](https://i.imgur.com/uoRGiDz.png)
 
-A simple POC for Blog application, build with Python3 and Django 2.1.
+A simple POC for Blog application, build with Django 2.
 
 ## Features
 
