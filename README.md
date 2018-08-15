@@ -27,7 +27,7 @@ All admin page operations are base on Django Admin page.
 - [Python 3.6.x](https://www.python.org/downloads/) or more updated.
 
 - [Django 2.x](https://docs.djangoproject.com/en/2.1/topics/install/), 
-  I used Django 2.1 when this project was build.
+  I used Django 2.1 when this project was built.
 
 - [Django CKEditor](https://github.com/django-ckeditor/django-ckeditor#installation), for wysiwyg editor.
 
@@ -37,7 +37,7 @@ Or view the `requirements.txt` file.
 
 ## Build and Testing
 
-### Install from requirement.txt
+### Install Dependencies from requirement.txt
 
 From projecr root, run:
 
@@ -88,7 +88,7 @@ Main page (front-page) can be access from [http://localhost:8000](http://localho
 
 _Coming soon.._
 
-## Reference and Related Documents
+## Related Documents
 
 _Coming soon.._
 
