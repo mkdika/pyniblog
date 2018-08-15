@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from .models import Post, Tag, PostComment
-from .forms import NewPostCommentForm
-from .blogsettings import BlogSetting
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.forms.models import model_to_dict
 from django.http import HttpResponseRedirect
+from .models import Post, Tag, PostComment
+from .forms import NewPostCommentForm
+from .blogsettings import BlogSetting
+
 
 # global response object for all pages
 response_dict = {'blog': BlogSetting}
@@ -52,14 +53,8 @@ def addcomment(request, permalink):
 
         # Check to see form is valid
         if form.is_valid():
-            print(">>> valid.")
             form.save(commit=True)
             return HttpResponseRedirect(reverse("post", args=(permalink,)))
-        else:
-            print(">>> NOT VALID!")
-            form = NewPostCommentForm()
-            response_dict['form'] = form
-            return render(request, 'blog/post.html', response_dict)
 
 
 def search(request, search_by, id):

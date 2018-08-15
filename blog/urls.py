@@ -8,5 +8,4 @@ urlpatterns = [
     path('posts/<str:search_by>/<str:id>', views.search, name='search'),
     path('about', views.about, name='about'),
     path('archives/<str:mode>', views.archive, name='archive'),
-    path('archives/<str:mode>', views.archive, name='archive'),
 ]
