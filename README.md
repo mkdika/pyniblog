@@ -20,20 +20,43 @@ As commons simple blog platform, here are the essential features:
 - Front-Page: Home, About, Archive, Categories, Tags, Post
 - Responsive view for both admin & front page.
 
+All admin page operations are base on Django Admin page.
+
 ## Requirement
 
 There are some external libraries required for this project:
 
-- __Django CKEditor__, for wysiwyg editor.
-  View the Django CKEditor installation [document](https://github.com/django-ckeditor/django-ckeditor#installation).
+- Django CKEditor, for wysiwyg editor.
+  View installation [document](https://github.com/django-ckeditor/django-ckeditor#installation).
 
-- [__Django Simple Captcha__](https://django-simple-captcha.readthedocs.io/en/latest/usage.html)
+- [Django Simple Captcha](https://django-simple-captcha.readthedocs.io/en/latest/usage.html)
 
 ## Build and Testing
 
-_Coming soon.._
+### Build
+
+  For first time, run:
+
+  ```console
+  # create all required migration
+  py manage.py makemigrations
+
+  # execute the migration script
+  py manage.py migrate
+  ```
+
+### Testing
+
+_Coming soon..._
+
 
 ## Local Deployment
+
+To run as local server:
+
+```console
+py manage.py runserver
+```
 
 ### Admin Page
 
