@@ -24,14 +24,26 @@ All admin page operations are base on Django Admin page.
 
 ## Requirement
 
-There are some external libraries required for this project:
+- [Python 3.6.x](https://www.python.org/downloads/) or more updated.
 
-- Django CKEditor, for wysiwyg editor.
-  View installation [document](https://github.com/django-ckeditor/django-ckeditor#installation).
+- [Django 2.x](https://docs.djangoproject.com/en/2.1/topics/install/), 
+  I used Django 2.1 when this project was build.
+
+- [Django CKEditor](https://github.com/django-ckeditor/django-ckeditor#installation), for wysiwyg editor.
 
 - [Django Simple Captcha](https://django-simple-captcha.readthedocs.io/en/latest/usage.html)
 
+Or view the `requirements.txt` file.
+
 ## Build and Testing
+
+### Install from requirement.txt
+
+From projecr root, run:
+
+```console
+pip install -r requirements.txt
+```
 
 ### Build
 
