@@ -1,0 +1,1 @@
+web: gunicorn pyniblog.wsgi --log-file -

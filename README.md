@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/mkdika/pyniblog.svg?branch=master)](https://travis-ci.org/mkdika/pyniblog)
 [![codecov](https://codecov.io/gh/mkdika/pyniblog/branch/master/graph/badge.svg)](https://codecov.io/gh/mkdika/pyniblog)
 [![codebeat badge](https://codebeat.co/badges/9298084a-61f8-4789-9d87-a0ec77a07655)](https://codebeat.co/projects/github-com-mkdika-pyniblog-master)
+[![Requirements Status](https://requires.io/github/mkdika/pyniblog/requirements.svg?branch=master)](https://requires.io/github/mkdika/pyniblog/requirements/?branch=master)
 
 ![Imgur](https://i.imgur.com/uoRGiDz.png)
 
@@ -118,6 +119,7 @@ _Coming soon.._
 - [Django - Writing and Running Test](https://docs.djangoproject.com/en/2.1/topics/testing/overview/)
 - [Codecov Python Example](https://github.com/codecov/example-python)
 - [Set Up Travis CI For Django project](https://medium.com/@MicroPyramid/set-up-travis-ci-for-django-project-427d6dd2f46c)
+- [Deploy Django application on Heroku](https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html)
 
 ## Copyright and License
 
